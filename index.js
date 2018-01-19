@@ -6,9 +6,6 @@ const isDev = require('electron-is-dev');
 const autoUpdater = require('electron-updater');
 const log = require("electron-log");
 
-log.transports.file.level = "debug";
-autoUpdater.logger = log;
-
 let mainWindow;
 let addWindow;
 
@@ -38,7 +35,8 @@ app.on('ready', function() {
 
     mainWindow.once('did-frame-finish-load', function() {
         if (checkOS && !isDev) {
-          // Initate auto-updates on macOs and windows
+          log.transports.file.level = "debug";
+          autoUpdater.logger = log;
           autoUpdater.checkForUpdatesAndNotify();
     }});
 });

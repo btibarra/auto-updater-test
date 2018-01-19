@@ -12,9 +12,8 @@
     "dist": "build"
   },
   "build": {
-    "appId": "com.tutorial.shoppinglist",
+    "appId": "com.btibarra.thisisanautoupdaterrepositorytest",
     "productName": "Shopping List",
-    "asar": false,
     "win": {
       "target": "nsis"
     },
