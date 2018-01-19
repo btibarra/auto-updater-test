@@ -1,13 +1,13 @@
-import { platform } from 'os';
-
 const electron = require('electron');
 const { app, BrowserWindow, Menu, ipcMain, dialog } = electron;
 const url = require('url');
 const path = require('path');
 const isDev = require('electron-is-dev');
-const log = require('electron-log');
 const autoUpdater = require('electron-updater');
+const log = require("electron-log");
 
+log.transports.file.level = "debug";
+autoUpdater.logger = log;
 
 let mainWindow;
 let addWindow;

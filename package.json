@@ -1,6 +1,6 @@
 {
   "name": "tutorial",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Shopping list desktop app",
   "main": "index.js",
   "scripts": {
@@ -37,12 +37,12 @@
   "dependencies": {
     "electron-builder-squirrel-windows": "^19.55.0",
     "electron-is-dev": "^0.3.0",
+    "electron-log": "^2.2.14",
     "electron-updater": "^2.19.1"
   },
   "devDependencies": {
     "electron": "^1.7.9",
     "electron-builder": "^19.54.0",
-    "electron-log": "^2.2.14",
     "electron-packager": "^10.1.0"
   },
   "repository": {
