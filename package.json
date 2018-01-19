@@ -1,0 +1,52 @@
+{
+  "name": "tutorial",
+  "version": "0.0.1",
+  "description": "Shopping list desktop app",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Shopping List\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "com.tutorial.shoppinglist",
+    "productName": "Shopping List",
+    "asar": false,
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": "false",
+      "allowToChangeInstallationDirectory": true
+    },
+    "extraFiles": [
+      "assets/3M/**/*"
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "btibarra",
+        "repo": "thisisanautoupdaterrepositorytest"
+      }
+    ]
+  },
+  "author": "Benjamin Ibarra",
+  "dependencies": {
+    "electron-builder-squirrel-windows": "^19.55.0",
+    "electron-is-dev": "^0.3.0",
+    "electron-updater": "^2.19.1"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-builder": "^19.54.0",
+    "electron-log": "^2.2.14",
+    "electron-packager": "^10.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btibarra/thisisanautoupdaterrepositorytest"
+  }
+}
