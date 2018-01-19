@@ -1,1 +1,1 @@
-# thisisanautoupdaterrepositorytest
+# This is an autoupdater repository test
